@@ -1,0 +1,59 @@
+//COMS-210 |Lab 4 | Youssef Badawy
+
+#include <iostream>
+#include <string>
+
+
+
+
+using namespace std;
+
+
+struct Restaurant
+{
+    string name;
+    string address;
+    int phoneNumber;
+    float  rating;
+    string priceAvg;
+
+}restaurant1;
+
+Restaurant createRestaurant();
+void printRestaurant(Restaurant a);
+
+
+int main()
+{
+
+    restaurant1 = createRestaurant();
+    printRestaurant(restaurant1);
+
+};
+
+Restaurant createRestaurant()
+{
+    Restaurant restaurantTemp;
+    
+    cout<<"Enter Name: ";
+    cin>>restaurantTemp.name;
+    cout<<"Enter Address: ";
+    cin>>restaurantTemp.address;
+    cout<<"Enter Phonenumber: ";
+    cin>>restaurantTemp.phoneNumber;
+    cout<<"Enter price range[Format:$$]: ";
+    cin>>restaurantTemp.priceAvg;
+    cout<<"Enter rating outOfFive: ";
+    cin>>restaurantTemp.rating;
+    
+    
+    return restaurantTemp;
+};
+
+
+void printRestaurant(Restaurant a)
+{
+    cout<<"---------------------------------------------------------------------------------------";
+    cout<<"Name is :"<<a.name<<endl<<"Address is : "<<a.address<<endl<<"Phonenumber is : "<<a.phoneNumber<<endl<<"Rating is : "<<a.rating<<"/5(Stars)"<<endl<<"Price range: "<<a.priceAvg;
+
+};
